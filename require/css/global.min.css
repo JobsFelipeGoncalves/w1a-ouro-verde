@@ -1,0 +1,278 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+
+/* Página Inicial */
+#apresentacao,
+#sobre,
+#valores,
+#inss,
+#emprestimos,
+#financiamento,
+#saqueAniversario,
+#fgts,
+#depoimento,
+#mensagem {
+  width: 100%;
+  height: auto !important;
+}
+
+/* menu  */
+.navbar .navbar-brand img {
+  margin: 5px;
+}
+
+.navbar .navbar-nav {
+  width: 100%;
+  padding: 10px;
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+  border-bottom: 2px solid var(--cor-laranja);
+  color: var(--cor-branco);
+  font-size: var(--f-16);
+  margin: 5px;
+  padding: 5px;
+}
+
+.navbar .navbar-nav .nav-item .nav-link:hover {
+  border-bottom: 2px solid var(--cor-branco);
+}
+
+/* apresentação  */
+#apresentacao {
+  /*    background-image: url("../../require/img/extra/apresentacao.png");*/
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#depoimento .item-depoimentos img {
+  border-radius: 100px;
+  width: 110px;
+}
+
+#apresentacao .owl-theme .owl-nav .owl-prev,
+#apresentacao .owl-theme .owl-nav .owl-next {
+  position: absolute;
+  height: auto;
+  color: inherit;
+  background: transparent;
+  padding: 5px;
+  border-radius: 100px;
+  z-index: 1;
+  margin-top: 10%;
+  display: none;
+}
+
+#apresentacao .owl-theme .owl-nav button:focus,
+#apresentacao .owl-theme .owl-nav button:focus {
+  outline: thin dotted !important;
+  outline: 0px auto -webkit-focus-ring-color;
+  outline-offset: 0px !important;
+}
+
+#apresentacao.owl-theme .owl-nav .owl-prev {
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  left: 40% !important;
+}
+
+#apresentacao .owl-theme .owl-nav .owl-next {
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  right: 40% !important;
+}
+
+#apresentacao .owl-dots {
+  display: none;
+}
+
+/* sobre  */
+#sobre img {
+  border-radius: 40px;
+}
+
+/* valores */
+#valores img {
+  width: 100px;
+  margin: 30px;
+}
+
+/*  inss  */
+#inss {
+  background-image: url("../../require/img/extra/fundo-inss.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center 315px;
+}
+
+#inss .decimo-terceiro {
+  background-image: url("../../require/img/extra/decimoterceiro-inss.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 30px;
+  padding: 50px 10px;
+}
+
+#inss .repre-legal {
+  background-image: url("../../require/img/extra/representante-inss.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 30px;
+  padding: 50px 10px;
+}
+
+#inss .decimo-terceiro img,
+#inss .repre-legal img {
+  width: 90px;
+  margin-left: -60px;
+}
+
+/* emprestimos */
+#emprestimos {
+  background-image: url("../../require/img/extra/fundo-emprestimos.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 0px 400px;
+  color: #fff;
+}
+
+#emprestimos .texto-titulo {
+  padding: 20px;
+  border-radius: 30px;
+}
+
+#emprestimos p {
+  text-align: center;
+}
+
+#emprestimos img {
+  margin-bottom: 20px;
+  width: 160px;
+}
+
+/* financiamento */
+#financiamento img {
+  margin: 10px;
+  width: 200px;
+}
+
+#saqueAniversario {
+  background-image: url("../../require/img/extra/antecipe.png");
+  background-position: left;
+  background-size: cover;
+}
+
+/* ftgs */
+#fgts {
+  background-image: url("../../require/img/extra/fgts.png");
+  background-position: center;
+  background-size: cover;
+}
+
+/* Depoimentos  */
+#depoimento .item-depoimentos {
+  background-color: var(--cor-branco);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+}
+
+#depoimento .item-depoimentos img {
+  border-radius: 100px;
+  width: 110px;
+}
+
+#depoimento .owl-theme .owl-nav .owl-prev,
+#depoimento .owl-theme .owl-nav .owl-next {
+  position: absolute;
+  height: auto;
+  color: inherit;
+  background: transparent;
+  padding: 5px;
+  border-radius: 100px;
+  z-index: 1;
+  margin-top: 10%;
+}
+
+#depoimento .owl-theme .owl-nav button:focus,
+#depoimento .owl-theme .owl-nav button:focus {
+  outline: thin dotted !important;
+  outline: 0px auto -webkit-focus-ring-color;
+  outline-offset: 0px !important;
+}
+
+#depoimento .owl-theme .owl-nav .owl-prev {
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  left: 40% !important;
+}
+
+#depoimento .owl-theme .owl-nav .owl-next {
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  right: 40% !important;
+}
+
+#depoimento .owl-dots {
+  display: none;
+}
+
+/* Mensagens */
+#mensagem {
+  background-color: var(--cor-azul-escuro);
+  background-image: url("../../require/img/extra/mesnagem.png");
+  background-position: center;
+  background-size: cover;
+}
+
+#formularioHome input,
+#formularioHome textarea,
+#formularioEmprego input,
+#formularioEmprego textarea {
+  border-radius: 10px;
+  color: var(--cor-cinza-800);
+  padding: 20px 40px;
+}
+
+#formularioHome textarea {
+  height: 157px !important;
+}
+
+/* footer  */
+footer .nav .nav-item .nav-link {
+  color: var(--cor-cinza-600);
+  font-size: var(--f-14);
+  margin: 5px;
+  padding: 0px;
+}
+
+footer .nav .nav-item .nav-link:hover {
+  color: var(--cor-laranja);
+}
+
+footer .rSociais img {
+  width: 50px !important;
+}
+
+footer .logoRodape img {
+  width: 130px;
+}
+
+footer .dev img {
+  width: 100px;
+}

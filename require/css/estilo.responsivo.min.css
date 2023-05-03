@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+
+/*   1024 px | Ipad / tablet     **/
+@media only screen and (max-width: 1024px){
+
+}
+
+/*   823 px | Ipad / tablet*/
+@media only screen and (max-width: 820px) {
+
+    #emprestimos{
+        background-image: none;
+        color: #303030;
+    }
+}
+
+/*   768 px | Ipad / tablet*/
+@media only screen and (max-width: 768px) {
+
+}
+
+/*   736 px | Ipad / tablet*/
+@media only screen and (max-width: 736px) {
+
+}
+
+/*   731 px | Ipad / tablet*/
+@media only screen and (max-width: 731px) {
+}
+
+/*   667 px | mobile Iphone Plus  **/
+@media only screen and (max-width: 667px) {
+    #emprestimos{
+        background-image: none;
+        color: #303030;
+    }
+}
+
+/*   640 px | mobile Iphone Plus  **/
+@media only screen and (max-width: 640px) {
+
+    #emprestimos{
+        background-image: none;
+        color: #303030;
+    }
+}
+
+/*    414 px | mobile Iphone Plus  **/
+@media only screen and (max-width: 414px) {
+    #emprestimos{
+        background-image: none;
+        color: #303030;
+    }
+
+}
+
+/*    411 px | mobile  */
+@media only screen and (max-width: 411px) {
+ 
+}
+
+/*    375 px | mobile     **/
+@media only screen and (max-width: 375px) {
+    #emprestimos{
+        background-image: none;
+        color: #303030;
+    }
+}
+
+/*    360 px | mobile     **/
+@media only screen and (max-width: 360px) {
+    #emprestimos{
+        background-image: none;
+        color: #303030;
+    }
+}
+
+/*    320 px | mobile IPhone   **/
+@media only screen and (max-width: 320px) {
+    #emprestimos{
+        background-image: none;
+        color: #303030;
+    }
+}
+
+/*   280 px | mobile Iphone Plus  **/
+@media only screen and (max-width: 280px) {
+    .navbar .navbar-brand img{
+        margin: 5px;
+        width: 80px;
+    }
+
+    #emprestimos{
+        background-image: none;
+        color: #303030;
+    }
+}
+

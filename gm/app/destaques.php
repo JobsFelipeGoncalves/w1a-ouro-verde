@@ -103,7 +103,7 @@
                     //calculo do inico da visualização
                     $inicio =  ($limiteRegistro * $paginaRecebida) - $limiteRegistro;
 
-                        $seleciona = "SELECT * FROM destaques WHERE status = '$abaAtual' ORDER BY ordem DESC LIMIT $inicio, $limiteRegistro  ";
+                        $seleciona = "SELECT * FROM slides_simples WHERE status = '$abaAtual' ORDER BY ordem DESC LIMIT $inicio, $limiteRegistro  ";
                         $consulta = $conexao -> prepare($seleciona);
                         $consulta -> execute();
 
@@ -186,8 +186,8 @@
 
                         <!-- caso esteja vzaio -->
                        <div class="centro p-5">                        
-                            <p class = "f-16 negrito">Você ainda não adicionou um vídeo!</p>
-                            <a href="destaques.php?funcao=novo&urlRetorno=<?= $URL_ATUAL ?>" class = "botao botao-a-min b-pequeno">Criar um destaque</a><br>
+                            <p class = "f-16 negrito">Você ainda não tem item publicado!</p>
+                            <a href="destaques_.php?funcao=novo&urlRetorno=<?= $URL_ATUAL ?>" class = "botao botao-a-min b-pequeno">Adicione agora</a><br>
                             <img width = "280px" src="<?= $URL_IMG ?>sistema/32980671.jpg" />                        
                         </div>
 
@@ -205,7 +205,7 @@
                         <?php                        
 
                             //Conta a quantidade de registo no meu banco
-                            $contaRegisto = "SELECT COUNT(id) AS numeroAchado FROM destaques";
+                            $contaRegisto = "SELECT COUNT(id) AS numeroAchado FROM slides_simples";
                             $quantidadeRegistros = $conexao -> prepare($contaRegisto);
                             $quantidadeRegistros -> execute();
                             $quantidadePesquisa = $quantidadeRegistros -> fetch(PDO::FETCH_ASSOC);
@@ -291,7 +291,7 @@
             //OCUTANDO conteúdo
             if ($acaoBotao == "lixeira") {
                 //========
-                $selecionaAcao = "UPDATE destaques SET status = 'lixeira' WHERE id = '$acoRotativo'";
+                $selecionaAcao = "UPDATE slides_simples SET status = 'lixeira' WHERE id = '$acoRotativo'";
                 $consultaAcao = $conexao -> prepare($selecionaAcao);
                 $consultaAcao -> execute();
 
@@ -303,7 +303,7 @@
             if ($acaoBotao == "restaurar") {
 
                // echo "Ok! Vamos ocultar conteúdo";
-                $selecionaAcao = "UPDATE destaques SET status = 'publicado' WHERE id = '$acoRotativo'";
+                $selecionaAcao = "UPDATE slides_simples SET status = 'publicado' WHERE id = '$acoRotativo'";
                 $consultaAcao = $conexao -> prepare($selecionaAcao);
                 $consultaAcao -> execute();
 
@@ -316,7 +316,7 @@
             if ($acaoBotao == "excluir") {
 
                 // echo "Ok! Vamos ocultar conteúdo";
-                $selecionaAcao = "DELETE FROM destaques WHERE id = '$acoRotativo'";
+                $selecionaAcao = "DELETE FROM slides_simples WHERE id = '$acoRotativo'";
                 $consultaAcao = $conexao -> prepare($selecionaAcao);
                 $consultaAcao -> execute();
  

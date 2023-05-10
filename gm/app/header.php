@@ -86,13 +86,13 @@
                         Destaques
                     </a>
                   </li>
-                  <li class="nav-item">
+<!--                   <li class="nav-item">
                     <a class="nav-link" href="depoimentos.php?aba=publicado&acao=lista">
                         <span class="material-symbols-rounded icones">
                         comment
                         </span>
                     Depoimentos</a>
-                  </li>
+                  </li> -->
                
                   <li class="nav-item">
                     <a class="nav-link" href="seo.php?acao=lista">

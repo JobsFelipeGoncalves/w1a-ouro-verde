@@ -1,9 +1,15 @@
 <?php
-    $host = "mysql.fatcred.com.br";
-    $usuario = "fatcred";
+    $host = "mysql.ouroverdeguindastes.com.br";
+    $usuario = "ouroverdeguind";
     $senha = "fatcred101010";
-    $banco = "fatcred";
+    $banco = "Ov103456";
     $porta = "";
+
+    // $host = "localhost";
+    // $usuario = "root";
+    // $senha = "";
+    // $banco = "gm_3";
+    // $porta = "";
     
     $conexao = new PDO("mysql:host=$host;dbname=".$banco, $usuario, $senha);
 

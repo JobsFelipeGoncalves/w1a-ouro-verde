@@ -98,16 +98,16 @@
 
         //recebe os campos do formulários
         $titulo = $_POST['titulo'];
+        $subtitulo = $_POST['subtitulo'];
         $img_desc = $_FILES['img_destaque']['name'];
-        $cor_fundo = $_POST['cor_fundo'];
         $texto_botao = $_POST['texto_botao'];
         $link_botao = $_POST['link_botao'];
-        $cor_botao = $_POST['cor_botao'];
 
         $move_imagem = move_uploaded_file($_FILES['img_destaque']['tmp_name'], '../img/slide/'. $_FILES['img_destaque']['name']);
+
         if($move_imagem){
-            $inserir = "INSERT INTO destaques (id, titulo, img, img_fundo, cor_botao, texto_botao, link_botao, status )  
-                        VALUES ('$identificador', '$titulo', '$img_desc', '$cor_fundo', '$cor_botao', '$texto_botao', '$link_botao', 'publicado')";
+            $inserir = "INSERT INTO slides_simples (id, titulo, subtitulo, img, link_botao, texto_botao,  status)  
+                        VALUES ('$identificador', '$titulo', '$titulo', '$img_desc', '$link_botao', '$texto_botao', 'publicado')";
 
                         $acao = $conexao -> prepare ($inserir);
                         $acao -> execute ();
@@ -125,18 +125,18 @@
                     <!-- formulario -->
                     <form id = "formConteudo" class = "gm-formularios-int" method="post" enctype="multipart/form-data">
 
-                        <h5 class = "mb-3">Configure seu destaque</h5>
+                    <h5 class = "mb-3">Configure seu destaque</h5>
                       <div class="mb-3">
                         <label for="titulo" class="form-label">Titulo</label> <span class="badge text-bg-light">Obrigatório</span>
                         <input type="text" class="form-control" id="titulo" name="titulo" required>
                       </div>
 
-                      <div class="row">        
-                          <div class="mb-3 col-md-4">
-                            <label for="cor_fundo" class="form-label">Cor de fundo</label> <span class="badge text-bg-light">Obrigatório</span>
-                            <input type="color" class="form-control" id="cor_fundo" name="cor_fundo"  style = "width: 100%; height: 47px;" required>
-                          </div>
+                      <div class="mb-3">
+                        <label for="subtitulo" class="form-label">Subtitulo</label> <span class="badge text-bg-light">Obrigatório</span>
+                        <input type="text" class="form-control" id="subtitulo" name="Subtitulo" >
+                      </div>
 
+                      <div class="row">  
                           <div class="mb-3 col">
                               <label for="img_destaque" class="form-label">Imagem de destaque</label><span class="badge text-bg-light">Obrigatório</span>
                               <input class="form-control" type="file" name = "img_destaque" id="img_destaque" required>
@@ -162,11 +162,6 @@
                             <input type="link" class="form-control" id="link_botao" name="link_botao" required>
                           </div>
 
-                          <div class="mb-3 col-md-4">
-                            <label for="cor_botao" class="form-label">Cor do botão</label> <span class="badge text-bg-light">Obrigatório</span>
-                            <input type="color" class="form-control" id="cor_botao" name="cor_botao"  style = "width: 100%; height: 50px;" required>
-                          </div>
-
                       </div>
                       <div class="pt-0 pb-3">
                         <hr>
@@ -186,7 +181,7 @@ if( $funcaoAtual == "editar" ){
 
 
         $idSelecao = $_GET['id'];
-        $seleciona = "SELECT * FROM destaques WHERE id = '$idSelecao' LIMIT 1";
+        $seleciona = "SELECT * FROM slides_simples WHERE id = '$idSelecao' LIMIT 1";
         $consulta = $conexao -> prepare($seleciona);
         $consulta -> execute();
 
@@ -219,18 +214,17 @@ if( $funcaoAtual == "editar" ){
 
         //recebe os campos do formulários
         $titulo = $_POST['titulo'];
+        $subtitulo = $_POST['subtitulo'];
         @$opcaoTrocar = $_POST['opcaoTrocar'];
-        $img_desc = $_FILES['img_destaque']['name'];
-        $cor_fundo = $_POST['cor_fundo'];
+        $img_desc = $_FILES['img_destaque']['name'];        
         $texto_botao = $_POST['texto_botao'];
         $link_botao = $_POST['link_botao'];
-        $cor_botao = $_POST['cor_botao'];
 
         if($opcaoTrocar != ""){
             $move_imagem = move_uploaded_file($_FILES['img_destaque']['tmp_name'], '../img/slide/'. $_FILES['img_destaque']['name']);
 
             if($move_imagem){
-                $inserir = "UPDATE destaques SET titulo = '$titulo', img = '$img_desc', img_fundo = '$cor_fundo', cor_botao = '$cor_botao', texto_botao = '$texto_botao', link_botao = '$link_botao', status = 'publicado'  WHERE id = '$idSelecao'";
+                $inserir = "UPDATE slides_simples SET titulo = '$titulo', subtitulo = '$subtitulo', img = '$img_desc', texto_botao = '$texto_botao', link_botao = '$link_botao', status = 'publicado'  WHERE id = '$idSelecao'";
                 $acao = $conexao -> prepare ($inserir);
                 $acao -> execute ();
 
@@ -241,7 +235,7 @@ if( $funcaoAtual == "editar" ){
             }
             
         }else{
-            $inserir = "UPDATE destaques SET titulo = '$titulo', img_fundo = '$cor_fundo', cor_botao = '$cor_botao', texto_botao = '$texto_botao', link_botao = '$link_botao', status = 'publicado'  WHERE id = '$idSelecao'";
+            $inserir = "UPDATE slides_simples SET titulo = '$titulo', subtitulo = '$subtitulo', texto_botao = '$texto_botao', link_botao = '$link_botao', status = 'publicado'  WHERE id = '$idSelecao'";
             $acao = $conexao -> prepare ($inserir);
             $acao -> execute ();
 
@@ -264,6 +258,11 @@ if( $funcaoAtual == "editar" ){
                       <div class="mb-3">
                         <label for="titulo" class="form-label">Titulo</label> <span class="badge text-bg-light">Obrigatório</span>
                         <input type="text" class="form-control" id="titulo" name="titulo" required value="<?= $registoSelecao['titulo'] ?>">
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="subtitulo" class="form-label">Subtitulo</label> <span class="badge text-bg-light">Obrigatório</span>
+                        <input type="text" class="form-control" id="subtitulo" name="subtitulo" required value="<?= $registoSelecao['subtitulo'] ?>">
                       </div>
 
 
@@ -290,11 +289,6 @@ if( $funcaoAtual == "editar" ){
 
                             </div>
                       </div>
-                      <div class="mb-3 col-md-12">
-                        <label for="cor_fundo" class="form-label">Cor de fundo</label> <span class="badge text-bg-light">Obrigatório</span>
-                        <input type="color" class="form-control" id="cor_fundo" name="cor_fundo"  style = "width: 100%; height: 47px;" required value="<?= $registoSelecao['img_fundo'] ?>">
-                      </div>
-
 
                       <div class="pt-0 pb-3">
                         <hr>
@@ -311,11 +305,6 @@ if( $funcaoAtual == "editar" ){
                          <div class="mb-3 col">
                             <label for="link_botao" class="form-label">Link do botão</label> <span class="badge text-bg-light">Obrigatório</span>
                             <input type="link" class="form-control" id="link_botao" name="link_botao" required value="<?= $registoSelecao['link_botao'] ?>">
-                          </div>
-
-                          <div class="mb-3 col-md-4">
-                            <label for="cor_botao" class="form-label">Cor do botão</label> <span class="badge text-bg-light">Obrigatório</span>
-                            <input type="color" class="form-control" id="cor_botao" name="cor_botao"  style = "width: 100%; height: 50px;" required value="<?= $registoSelecao['cor_botao'] ?>">
                           </div>
 
                       </div>

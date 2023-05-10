@@ -2,14 +2,14 @@
     // $host = "localhost";
     // $usuario = "root";
     // $senha = "";
-    // $banco = "proverodonto";
+    // $banco = "gm_3";
     // $porta = "";
 
-    $host = "127.0.0.1";
-    $usuario = "appwbc_podonto";
-    $senha = "PoD$21@onto20";
-    $banco = "appwbc_podonto";
-    $porta = "3306";
+    $host = "mysql.ouroverdeguindastes.com.br";
+    $usuario = "ouroverdeguind";
+    $senha = "fatcred101010";
+    $banco = "Ov103456";
+    $porta = "";
     
     $conexao = new PDO("mysql:host=$host;dbname=".$banco, $usuario, $senha);
 

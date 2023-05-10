@@ -1,111 +1,67 @@
-    <footer>
-      <div class="container  pt-5 pb-3 mobile-texto-centro">
+    <footer class="f-princ branco">
+      <div class="container pt-5 pb-3 mobile-texto-centro">
         <div class="row">
-          <div class="col-12 col-ms-12 col-lg-4 mb-3">
-            <h5 class="laranja mb-2">INÍCIO</h5>
+          <div class="col-12 col-ms-12 col-lg-12 centro">
+          </div>
+        </div>
+
+        <div class="row mt-3">
+          <div class="col-12 col-sm-1 col-lg-1"></div>
+          <div class="col-12 col-sm-3 col-lg-3 mb-3">            
+            <a class="navbar-brand logoRodape" href="#">
+              <img src="<?= BASE_IMG ?>marcas/marca-ouro-verde-negativa.png" 
+                   alt = "Marca do Ouro Verde Muncks e Guindastes. A marca é uma garra dourada segurando uma caixa dourada e abaixo as escritas Ouro Verde em verde e mais abaixo escrito Muncks e Guindastes"
+                   class = "img-fluid"
+              />
+            </a>
+          </div>
+          <div class="col-12 col-sm-3 col-lg-3 mb-3 branco m-auto">
+            <h5 class=" mb-2">INÍCIO</h5>
 
               <ul class="nav flex-column negrito mb-3">
                 <li class="nav-item">
-                  <a class="nav-link" href="#apresentacao">Início</a>
+                  <a class="nav-link" href="<?= BASE ?>">Início</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#sobre">A Fatcred</a>
+                  <a class="nav-link" href="<?= BASE ?>#sobre">Quem somos</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#emprestimos">Empréstimos</a>
+                  <a class="nav-link" href="<?= BASE ?>#servicos">Seriços</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#financiamento">Financiamentos </a>
+                  <a class="nav-link" href="<?= BASE ?>#guindastes">Locação de muncks/guindastes </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="<?= BASE ?>trabalhe-conosco" target="_blank">Trabalhe conosco</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#mensagem">Fale conosco</a>
+                  <a class="nav-link" href="<?= BASE ?>#mensagem">Contato</a>
                 </li>
               </ul>
           </div>
 
-          <div class="col-12 col-ms-12 col-lg-5 mb-4">
-            <h5 class="laranja mb-2">ENDEREÇOS</h5>
-            <p class = "mb-1">
-              <strong class = "">
-                Matriz - Fátima do Sul-MS
-              </strong><br />
-              <span>Avenida 09 de Julho, 30.
-                <br>
-                67 9 9957-3488 / 67 9 98703392
-              </span>
-                
-              </strong>
-            </p>
-            <p class = "mb-1">
-              <strong class = "">
-                Glória de Dourados-MS
-              </strong><br />
-              <span>Avenida Presidente Vargas, 1379
-                <br>
-                67 9 8471-2519 / 67 9 8163-8029
+          <div class="col-12 col-sm-3 col-lg-3 mb-4 branco m-auto">
+            <h5 class=" mb-2">ENDEREÇO</h5>
+            <p class = "mb-4 f-14">
+              <span class = "">
+                Rua Waldomiro de Souza, 63<br />
+                Vila Industrial, Dourados - MS.
               </span>
             </p>
-            <p class = "mb-1">
-              <strong class = "">
-                Deodápolis-MS
-              </strong><br />
-              <span>Rua Fanoel do Ouro, 597.
-                <br>
-                67 9 9615-2754 / 67 9 9868-2693
-              </span>
-            </p>
-            <p class = "mb-1">
-              <strong class = "">
-                Ivinhema - MS
-              </strong><br />
-              <span>Avenida Brasil, 360.
-                <br>
-                67 9 9956-0613 / 67 9 8431-8963
-              </span>
-            </p>
-            <p class = "mb-1">
-              <strong class = "">
-                Maracaju-MS
-              </strong><br />
-              <span>Rua Pereira do Lago, 2520.
-                <br>
-                67 9 9906-1030 / 67 9 9906-1040
+
+            <h5 class=" mb-2">FALE COM A GENTE</h5>
+            <p class = "mb-4 f-14">
+              <span class = "">
+                (67) 3424.2276 | (67) 3424.3088<br />
+                Lademar: 67 99224.3236<br />
+                contato@ouroverdeguindastes.com.br<br />
               </span>
             </p>
           </div>
-
-          <div class="col-12 col-ms-12 col-lg-3">
-            <h5 class="laranja mb-2">CONTATOS</h5>
-            
-
-            <div class="row rSociais mt-4">
-              <div class="col-2 col-sm-2 col-lg-2">
-                <img src="<?= BASE_IMG ?>extra/facebook.png" class = "img-fluid">
-              </div>
-              <div class="col-2 col-sm-12 col-lg-2">
-                <img src="<?= BASE_IMG ?>extra/instagram.png" class = "img-fluid">
-              </div>
-              <div class="col-6 col-sm-12 col-lg-8">
-              </div>
-              <div class="col-12 col-sm-12 col-lg-12 negrito f-18 laranja">
-                @fatcred
-              </div>
-            </div>
-
-            <div class="row logoRodape mt-4">
-              <div class="col-12 col-sm-12 col-lg-12 ">
-                <img src="<?= BASE_IMG ?>marcas/logo_c.png" class = "img-fluid">
-              </div>
-            </div>
-
-          </div>
+          <div class="col-12 col-sm-1 col-lg-1"></div>
         </div>
+      </div>
 
-        <div class="row mt-5 mb-3 dev centro">
-          <div class="col-12 col-ms-12 col-lg-12 f-12">
+      <div class="container-fluid f-branco">
+        <div class="row pt-3 pb-3">
+          <div class="col-12 col-sm-1 col-lg-1 centro m-auto">
             <a href = "https://www.w1agencia.com.br/" target="_blank"><img src="<?= BASE_IMG ?>marcas/logo_w1.png" class = "img-fluid"></a>
           </div>
         </div>

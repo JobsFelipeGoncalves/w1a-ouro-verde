@@ -5,8 +5,8 @@ if(!defined('BASE_DEV')){
 }
 
 if(!defined('BASE')){
-  define('BASE','http://localhost/w1agencia/ouro-verde/');
-  //define('BASE','http://www.fatcred.com.br/');
+  //define('BASE','http://localhost/w1agencia/ouro-verde/');
+  define('BASE','http://www.ouroverdeguindastes.com.br/demo/');
 }
 
 if(!defined('BASE_IMG')){
@@ -26,8 +26,8 @@ if(!defined('BASE_JS')){
 }
 
 if(!defined('PROJECT_DIR'))
-  define('PROJECT_DIR', 'w1agencia/ouro-verde');
-  //define('PROJECT_DIR', '/');
+  //define('PROJECT_DIR', 'w1agencia/ouro-verde');
+  define('PROJECT_DIR', 'demo');
 
 if(!defined('APPLICATION_DIR'))
   define('APPLICATION_DIR', 'app');

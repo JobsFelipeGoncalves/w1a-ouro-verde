@@ -46,7 +46,7 @@
   <link rel="stylesheet" href="<?= BASE_CSS ?>bootstrap.min.css">
   <link rel="stylesheet" href="<?= BASE_CSS ?>global.min.css">  
   <link rel="stylesheet" href="<?= BASE_CSS ?>fg.min.css">  
-  <!-- <link rel="stylesheet" href="<?= BASE_CSS ?>estilo.responsivo.min.css"> -->
+  <link rel="stylesheet" href="<?= BASE_CSS ?>estilo.responsivo.min.css">
   <link rel="stylesheet" href="<?= BASE_CSS ?>owl.carousel.min.css">
 
 
@@ -64,7 +64,7 @@
             <div class="owl-carousel owl-theme">
 
   <?php
-        $seleciona = "SELECT * FROM destaques WHERE status = 'publicado' ";
+        $seleciona = "SELECT * FROM slides_simples WHERE status = 'publicado' ";
         $consulta = $conexao -> prepare($seleciona);
         $consulta -> execute();
 
@@ -72,28 +72,53 @@
 
               while($registo = $consulta -> fetch(PDO::FETCH_ASSOC)){
   ?>
-              <div class="item m-auto">
-                        <div class="container-fluid  pb-5 pt-5" style = "background-color: <?= $registo['img_fundo'] ?>;">
+
+             <div class="item m-auto">                
+                <div class="container-fluid img-destaque" style = "background-image: url(<?= BASE ?>gm/img/slide/<?= $registo['img'] ?>);">
+                  <div class="row pt-5 pb-5" >
+                      <div class="col-12 col-sm-1 col-lg-1"></div>
+                      <div class="col-12 col-sm-3 col-lg-3 d-flex">   
+                        <div class="adfox  align-self-center">
+                          <h1 class="display-5 negrito cor-1">
+                            <?= $registo['titulo'] ?>
+                          </h1>
+                          <h5>
+                            <?= $registo['subtitulo'] ?>
+                          </h5>
+                          <p class = "mt-4">
+                            <a href="<?= $registo['link_botao'] ?>" class = "btn botao-princ botao-medio"><?= $registo['texto_botao'] ?></a>
+                          </p> 
+                        </div>                 
+                      </div>
+
+                      <div class="col-12 col-sm-5 col-lg-5 d-flex">
+                          <!-- nulo -->
+                      </div>
+                  </div>
+                </div>
+              </div> 
+         <!--      <div class="item m-auto">
+                        <div class="container-fluid img-destaque pb-5 pt-5" style = "background-image: url(<?= BASE ?>gm/img/slide/<?= $registo['img'] ?>);">
                           <div class="row mt-5 mb-5 pt-5 pb-5" >
-                            <div class="col-12 col-sm-2 col--lg-2"></div>
-                            <div class="col-12 col-sm-4 col-lg-4 d-flex">   
+                            <div class="col-12 col-sm-2 col-lg-2"></div>
+                            <div class="col-12 col-sm-5 col-lg-5 d-flex">   
                               <div class="adfox  align-self-center">
-                                <h1 class="display-3 negrito branco">
+                                <h1 class="display-3 negrito cor-1">
                                   <?= $registo['titulo'] ?>
                                 </h1>
+                                <h5>Subtitulo</h5>
                                 <p class = "mt-4">
-                                  <a href="<?= $registo['link_botao'] ?>" class = "botao botao-grande f-20" style = "color: fff; background-color: <?= $registo['cor_botao'] ?>;"><?= $registo['texto_botao'] ?></a>
+                                  <a href="<?= $registo['link_botao'] ?>" class = "botao bbotao-grande f-20" style = "color: fff; background-color: <?= $registo['cor_botao'] ?>;"><?= $registo['texto_botao'] ?></a>
                                 </p> 
                               </div>                 
                             </div>
 
                             <div class="col-12 col-sm-4 col-lg-4 d-flex">
-                                <img  src = "<?= BASE ?>gm/img/slide/<?= $registo['img'] ?>" class = "d-flex align-self-center img-fluid"/>
+                                <!-- nulo --
                             </div>
-                            <div class="col-12 col-sm-2 col-lg-2"></div>
                           </div>
                         </div>
-              </div>
+              </div> -->
 <?php }} ?>
             </div>                                
             <div class = " owl-theme MB-5">
@@ -101,42 +126,41 @@
             </div>
           </section>
 
-
 <!-- quem somos -------->
-<section>
-  <div class="container">
+<section class="f-branco pt-5 pb-5">
+  <div class="container pt-5 pb-5">
     <div class="row">
       <div class="col-12 col-sm-12 col-lg-12 mb-3 pt-5 pb-5">
           
           <div class="row">
             <div class="col-12 col-sm-12">
-              <h1 class="negrito mb-3">
+              <h1 class="negrito mb-3 cor-1">
                 Quem somos?
               </h1>
 
-              <p>
+              <p class = "f-20">
                 Fundada há mais de 25 anos a Ouro Verde Guindastes,  na direção do Sr Lademar, sempre com bom atendimento e atendimento rápido, tem se posicionado neste mercado, de maneira sólida e promissora, tendo suas parcerias firmada com clientes e assim, mantendo a liderança na região da Grandourados.
               </p>
             </div>
           </div>
 
-          <div class="row">
+          <div class="row mt-3">
             <div class="col-12 col-sm-6 col-lg-6">
-              <h1 class="negrito mb-3">
+              <h1 class="negrito mb-3 cor-1">
                 Missão
               </h1>
 
-              <p>
+              <p class = "f-18">
                 Nossa principal missão é suprir as necessidades do mercado em foco, dentro da nossa área de atuação, zelando pela qualidade de vida da nossa equipe e aprimoramento constante; tendo como alicerce a experiência e tradição.
               </p>
             </div>
 
             <div class="col-12 col-sm-6 col-lg-6">
-              <h1 class="negrito mb-3">
+              <h1 class="negrito mb-3 cor-1">
                 Valores
               </h1>
 
-              <p>
+              <p class = "f-18">
                 -Manter nossos métodos e visão de trabalho.<br>
                 -Valorizar nossa equipe de colaboradores.<br>
                 -Manter parceria com nossos clientes e fornecedores.<br>
@@ -153,41 +177,40 @@
 
 
 <!-- serviços -->
-<section>
-  <div class="container">
+<section class="pt-5 pb-5 f-cinza-1">
+  <div class="container pt-5 pb-5">
     <div class="row">
       <div class="col">
-        <h1 class="negrito">
+        <h1 class="negrito cor-2">
           Nossos serviços
         </h1>
       </div>
     </div>
 
-    <div class="row">
+    <div class="row mb-4 mt-4">
       <div class="col-12 col-sm-4 col-lg-4 text-center mb-4">
-        <img src="" class="img-fluid">
+        <img src="<?= BASE_IMG ?>extra/guindaste.png" class="img-fluid mb-4 p-3">
         <br>
         <h5>SERVIÇOS DE GUINDASTE</h5>
       </div>
       <div class="col-12 col-sm-4 col-lg-4 text-center mb-4">
-        <img src="" class="img-fluid">
+        <img src="<?= BASE_IMG ?>extra/munck.png" class="img-fluid mb-4 p-3">
         <br>
         <h5>SERVIÇOS DE MUNCK</h5>
       </div>
       <div class="col-12 col-sm-4 col-lg-4 text-center mb-4">
-        <img src="" class="img-fluid">
+        <img src="<?= BASE_IMG ?>extra/locacao.png" class="img-fluid mb-4 p-3">
         <br>
         <h5>LOCAÇÃO E REMOÇÃO</h5>
       </div>
     </div>
   </div>
-
 </section>
 
 
-<!-- serviços -->
-<section>
-  <div class="container">
+<!-- portfolio -->
+<section class="f-1 branco pt-5 pb-5">
+  <div class="container pt-5 pb-5">
     <div class="row">
       <div class="col">
         <h1 class="negrito">
@@ -196,19 +219,19 @@
       </div>
     </div>
 
-    <div class="row">
+    <div class="row mt-4 mb-4">
       <div class="col-12 col-sm-4 col-lg-4 text-center mb-4">
-        <img src="" class="img-fluid">
+        <img src="<?= BASE_IMG ?>extra/servico_remocao.png" class="img-fluid mb-4 p-4">
         <br>
-        <h5>REMOÇÃO DE ÁRVORES</h5>
+        <h5 >REMOÇÃO DE ÁRVORES</h5>
       </div>
       <div class="col-12 col-sm-4 col-lg-4 text-center mb-4">
-        <img src="" class="img-fluid">
+        <img src="<?= BASE_IMG ?>extra/servico_placa.png" class="img-fluid mb-4 p-4">
         <br>
         <h5>INSTALAÇÃO DE PLACAS</h5>
       </div>
       <div class="col-12 col-sm-4 col-lg-4 text-center mb-4">
-        <img src="" class="img-fluid">
+        <img src="<?= BASE_IMG ?>extra/servico_post.png" class="img-fluid mb-4 p-4">
         <br>
         <h5>INSTALAÇÃO DE POSTES</h5>
       </div>
@@ -217,24 +240,63 @@
 </section>
 
 <!-- whatsapp -->
-<section>
+<section class="pt-5 pb-5">
+  <div class="container pt-5 pb-5">
+
+    <div class="row pt-5">
+      <div class="col-12 col-sm-5 col-lg-6 text-center mb-4">
+        <img src="<?= BASE_IMG ?>extra/caminhao.png" class="img-fluid p-3">
+      </div>
+      <div class="col-12 col-sm-2 col-lg-1"><!-- nulo --></div>
+      <div class="col-12 col-sm-4 col-lg-4 mb-4 p-3 cor-2 d-flex align-items-center">
+        <blockquote>
+            <h1 class="mb-5 f-50">Fale conosco<br><b>pelo WhatsApp</b></h1>
+            <a href = "#" class = "mt-3 btn botao-princ branco negrito centro" style = "border-radius: 10px;"> 
+              <img src="<?= BASE_IMG ?>extra/whatsapp_icon.svg" width = "30px">
+              <span class="p-2 f-24">67 9 9224-3236</span>
+            </a>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--  formularios -->
+<section class = "pt-5 pb-5 f-preto">
   <div class="container">
+    <div class="row">
+      <div class="col centro">
+        <h1 class="negrito branco">
+          Entre em contato
+        </h1>
+      </div>
+    </div>
 
     <div class="row">
-      <div class="col-12 col-sm-4 col-lg-4 text-center mb-4">
-        <img src="" class="img-fluid">
-      </div>
+      <div class="col-12 col-sm-8 col-lg-8 m-auto">
+        <form class = "w-100 p-2">
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="nomeCompleto" name = "nomeCompleto" placeholder="Digite seu nome completo" />
+            <label for="nomeCompleto">Nome completo</label>
+          </div>
 
-      <div class="col-12 col-sm-4 col-lg-4 text-center mb-4">
-        <img src="" class="img-fluid">
-        <br>
-        <h5>INSTALAÇÃO DE PLACAS</h5>
-      </div>
+          <div class="form-floating mb-3">
+            <input type="mail" class="form-control" id="email" name = "email"  placeholder="Digite seu e-mail"/>
+            <label for="email">Seu melhor e-mail</label>
+          </div>
 
-      <div class="col-12 col-sm-4 col-lg-4 text-center mb-4">
-        <img src="" class="img-fluid">
-        <br>
-        <h5>INSTALAÇÃO DE POSTES</h5>
+          <div class="form-floating mb-3">
+            <input type="tel" class="form-control" id="telefone" name = "telefone"  placeholder="Digite seu telefone"/>
+            <label for="telefone">Seu telefone</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <textarea class="form-control" placeholder="Deixe a sua mensagem" name = "mensagem" id="mensagemF" style = "height: 200px;"></textarea>
+            <label for="mensagem">Deixe sua mensagem</label>
+          </div>
+
+            <button type="submit" class="btn botao-sec">Enviar mensagem</button>
+        </form>
       </div>
     </div>
   </div>
@@ -251,7 +313,7 @@
   <script src="<?= BASE_JS ?>owl.carousel.min.js"></script>
   <script src="<?= BASE_JS ?>bootstrap.min.js"></script>
   <script src="<?= BASE_JS ?>jquery.mask.min.js"></script>
-    <script src="<?= BASE_JS ?>jquery.mask.min.js"></script>
+  <script src="<?= BASE_JS ?>jquery.mask.min.js"></script>
   <script>
     jQuery(function () {
 
@@ -268,7 +330,7 @@
 
 
 
-      $("#fone").mask("(99) 9 9999-9999");
+      $("#telefone").mask("(99) 9 9999-9999");
 
       $('#formularioHome').submit(function(){
         $.ajax({

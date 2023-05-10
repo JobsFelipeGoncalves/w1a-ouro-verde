@@ -9,14 +9,38 @@
 /*   823 px | Ipad / tablet*/
 @media only screen and (max-width: 820px) {
 
-    #emprestimos{
-        background-image: none;
-        color: #303030;
-    }
 }
 
 /*   768 px | Ipad / tablet*/
 @media only screen and (max-width: 768px) {
+
+    header .navbar-nav .nav-item {
+      text-align: center !important;
+    }
+
+    .navbar{
+        border:1px solid #f1f1f1;
+    }
+
+    .navbar .navbar-brand img{
+        margin: 5px;
+        width: 100px;
+        float: left !important;
+    }
+
+    .navbar .navbar-toggler{
+        border: 0px;
+        font-size: 16px;
+        margin: 0 !important;
+        padding: 0px;
+        font-weight: bold;
+    }
+
+    #apresentacao .img-destaque{
+      background-size: cover!important;
+      background-position: right;
+    }
+
 
 }
 
@@ -31,57 +55,175 @@
 
 /*   667 px | mobile Iphone Plus  **/
 @media only screen and (max-width: 667px) {
-    #emprestimos{
-        background-image: none;
-        color: #303030;
-    }
 }
 
 /*   640 px | mobile Iphone Plus  **/
 @media only screen and (max-width: 640px) {
-
-    #emprestimos{
-        background-image: none;
-        color: #303030;
-    }
 }
 
 /*    414 px | mobile Iphone Plus  **/
 @media only screen and (max-width: 414px) {
-    #emprestimos{
-        background-image: none;
-        color: #303030;
+
+    header .navbar-nav .nav-item {
+      text-align: center !important;
     }
+
+    .navbar{
+        border:1px solid #f1f1f1;
+    }
+
+    .navbar .navbar-brand img{
+        margin: 5px;
+        width: 100px;
+        float: left !important;
+    }
+
+    .navbar .navbar-toggler{
+        border: 0px;
+        font-size: 16px;
+        margin: 0 !important;
+        padding: 0px;
+        font-weight: bold;
+    }
+
+    #apresentacao .img-destaque{
+      background-size: cover!important;
+      background-position: right;
+    }
+
 
 }
 
 /*    411 px | mobile  */
 @media only screen and (max-width: 411px) {
  
+    header .navbar-nav .nav-item {
+      text-align: center !important;
+    }
+
+    .navbar{
+        border:1px solid #f1f1f1;
+    }
+
+    .navbar .navbar-brand img{
+        margin: 5px;
+        width: 100px;
+        float: left !important;
+    }
+
+    .navbar .navbar-toggler{
+        border: 0px;
+        font-size: 16px;
+        margin: 0 !important;
+        padding: 0px;
+        font-weight: bold;
+    }
+
+    #apresentacao .img-destaque{
+      background-size: cover!important;
+      background-position: right;
+    }
+
+
 }
 
 /*    375 px | mobile     **/
 @media only screen and (max-width: 375px) {
-    #emprestimos{
-        background-image: none;
-        color: #303030;
+
+    header .navbar-nav .nav-item {
+      text-align: center !important;
     }
+
+    .navbar{
+        border:1px solid #f1f1f1;
+    }
+
+    .navbar .navbar-brand img{
+        margin: 5px;
+        width: 100px;
+        float: left !important;
+    }
+
+    .navbar .navbar-toggler{
+        border: 0px;
+        font-size: 16px;
+        margin: 0 !important;
+        padding: 0px;
+        font-weight: bold;
+    }
+
+    #apresentacao .img-destaque{
+      background-size: cover!important;
+      background-position: right;
+    }
+
+
 }
 
 /*    360 px | mobile     **/
 @media only screen and (max-width: 360px) {
-    #emprestimos{
-        background-image: none;
-        color: #303030;
+
+    header .navbar-nav .nav-item {
+      text-align: center !important;
     }
+
+    .navbar{
+        border:1px solid #f1f1f1;
+    }
+
+    .navbar .navbar-brand img{
+        margin: 5px;
+        width: 100px;
+        float: left !important;
+    }
+
+    .navbar .navbar-toggler{
+        border: 0px;
+        font-size: 16px;
+        margin: 0 !important;
+        padding: 0px;
+        font-weight: bold;
+    }
+
+    #apresentacao .img-destaque{
+      background-size: cover!important;
+      background-position: right;
+    }
+
+
 }
 
 /*    320 px | mobile IPhone   **/
 @media only screen and (max-width: 320px) {
-    #emprestimos{
-        background-image: none;
-        color: #303030;
+
+    header .navbar-nav .nav-item {
+      text-align: center !important;
     }
+
+    .navbar{
+        border:1px solid #f1f1f1;
+    }
+
+    .navbar .navbar-brand img{
+        margin: 5px;
+        width: 100px;
+        float: left !important;
+    }
+
+    .navbar .navbar-toggler{
+        border: 0px;
+        font-size: 16px;
+        margin: 0 !important;
+        padding: 0px;
+        font-weight: bold;
+    }
+
+    #apresentacao .img-destaque{
+      background-size: cover!important;
+      background-position: right;
+    }
+
+
 }
 
 /*   280 px | mobile Iphone Plus  **/
@@ -89,11 +231,6 @@
     .navbar .navbar-brand img{
         margin: 5px;
         width: 80px;
-    }
-
-    #emprestimos{
-        background-image: none;
-        color: #303030;
     }
 }
 

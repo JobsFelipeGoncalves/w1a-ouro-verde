@@ -127,7 +127,7 @@
           </section>
 
 <!-- quem somos -------->
-<section class="f-branco pt-5 pb-5">
+<section class="f-branco pt-5 pb-5" id ="sobre">
   <div class="container pt-5 pb-5">
     <div class="row">
       <div class="col-12 col-sm-12 col-lg-12 mb-3 pt-5 pb-5">

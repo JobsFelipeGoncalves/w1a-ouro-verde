@@ -1,8 +1,8 @@
 <?php
     $host = "mysql.ouroverdeguindastes.com.br";
     $usuario = "ouroverdeguind";
-    $senha = "fatcred101010";
-    $banco = "Ov103456";
+    $senha = "Ov103456";
+    $banco = "ouroverdeguind";
     $porta = "";
 
     // $host = "localhost";
